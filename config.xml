@@ -2,7 +2,7 @@
 <widget id="com.johannesflood.iparty" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>iParty</name>
     <description></description>
-    <author email="support@phonegap.com" href="http://phonegap.com">Johannes Flood</author>
+    <author email="johannes_flood@hotmail.com" href="http://jojogroup.se">Johannes Flood</author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     

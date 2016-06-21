@@ -1,7 +1,71 @@
 
 var colors = ["#e74c3c", "#27ae60", "#2980b9", "#8e44ad"];
 var last_index = 0;
-var questions = {truth:[
+var bottle_is_spinning = false;
+var questions;
+var question_holder_lang = {english:{
+			truth:[
+	{shown:false, question:"Have you ever lied about how many poeple you've slept with?"},
+	{shown:false, question:"How many poeple have you slept with?"},
+	{shown:false, question:"When was the last time you had sex?"},
+	{shown:false, question:"When was the last time you kissed someone?"},
+	{shown:false, question:"Have you ever heard a family member having sex? Who?"},
+	{shown:false, question:"Have you ever filmed yourself in a sexual situation?"},
+	{shown:false, question:"Who would you rather kiss in this room?"},
+	{shown:false, question:"Who would you rather sleep with, Donald Trump or Michael Moore?"},
+	{shown:false, question:"Who would you rather sleep with, Hillary Clinton or Sarah Palin?"},
+	{shown:false, question:"How many condoms did you bring here today?"},
+	{shown:false, question:"When's the last time you watched porn?"},
+	{shown:false, question:"Have you ever been interested in someone in this room who doesn't know it?"},
+	{shown:false, question:"Do you have any nudes of yourself in your phone?"},
+	{shown:false, question:"Have you ever sent a nude to someone?"},
+	{shown:false, question:"Who's the last person you had a crush on?"},
+	{shown:false, question:"When was the first time you kissed someone?"},
+	{shown:false, question:"Have you ever been or gotten someone pregnant?"},
+	{shown:false, question:"When's the last time you got high?"},
+	{shown:false, question:"Who was the last person you spoke on the phone with?"},
+	{shown:false, question:"When's the last time you masturbated?"},
+	{shown:false, question:"What's the most embarrassing thing you've done while being drunk?"},
+	{shown:false, question:"Have you ever lied about your age?"},
+	{shown:false, question:"Have you ever had plastic surgery?"},
+	{shown:false, question:"Do you believe in god?"},
+	{shown:false, question:"Have you in the last 12 months taken money from a family member?"},
+	{shown:false, question:"Have you ever had a finger inside your own asshole?"},
+	{shown:false, question:"have you had sex in the last 30 days?"},
+	{shown:false, question:"Who in this room have you slept with"},
+	{shown:false, question:"Of the people playing, who's mom would you rather sleep with of you had to choose?"}
+],
+
+dare:[
+	{shown:false, question:"Let the person to your right decide where you should kiss the person to your left."},
+	{shown:false, question:"Put as big part of your hand as possible in your mouth, and keep it there for 1 minute."},
+	{shown:false, question:"Let the person across the table check your breath."},
+	{shown:false, question:"Try putting your leg behind your head, you may ask for help."},
+	{shown:false, question:"Let the rest of the group read the 3 last texts you sent."},
+	{shown:false, question:"Make out with a ghost for 15 seconds."},
+	{shown:false, question:"Make your best orgasm face."},
+	{shown:false, question:"Give the 3 people to your left a kiss where ever you want."},
+	{shown:false, question:"Take off any piece of clothing and keep it off until it's your turn again."},
+	{shown:false, question:"Let the rest of the group check the browser history on your phone."},
+	{shown:false, question:"Drink."},
+	{shown:false, question:"Smell the armpits of the person to your left."},
+	{shown:false, question:"Let everyone hear what a dolphin sounds like."},
+	{shown:false, question:"Take a picture with everyone and post it on you snapshat story."},
+	{shown:false, question:"Go to Instagram and like the first 5 posts regardless of who posted them."},
+	{shown:false, question:"Drink whatever is left in your glass."},
+  	{shown:false, question:"Congrats! You get a kiss from either the person to your left or right, your choise."},
+  	{shown:false, question:"Call your mom's cell phone long enough for her to hear but not pick up."},
+  	{shown:false, question:"If you have a one dollar bill on you, give it to someone else who's playing."},
+  	{shown:false, question:"Make your best Donald Trump impression."},
+  	{shown:false, question:"Let someone go through your wallet."},
+  	{shown:false, question:"Keep your hands inside someone else's pockets for 1 minute. "},
+  	{shown:false, question:"You and you neighbours drink."},
+  	{shown:false, question:"Kiss any part of the body of the person sitting to your right."},
+]
+		},
+
+
+		swedish:{truth:[
 		{shown:false, question:"Hur lång tid har det gått sedan du senast kysste någon?"},
 		{shown:false, question:"Har du någonsin varit intresserad av någon i detta rummet?"},
 		{shown:false, question:"Vem i detta rummet av motasatt kön (eller andra könet om du är gay), hade du valt att kyssa om du var tvungen?"},
@@ -26,7 +90,8 @@ var questions = {truth:[
 		{shown:false, question:"När hade du senast sex?"},
 		{shown:false, question:"Har du legat med fler än 15 personer?"},
 		{shown:false, question:"Har du någonsin haft ett finger i ditt anus?"},
-		{shown:false, question:"Vem skulle du helst ligga med, kungen eller statsministern?"}
+		{shown:false, question:"Vem skulle du helst ligga med, kungen eller statsministern?"},
+		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"}
 
 	],
 	dare: [
@@ -55,8 +120,9 @@ var questions = {truth:[
 		{shown:false, question:"Drick 2 shots."},
 		{shown:false, question:"Dina 2 bordsgrannar sätter sig i på dina knän tills det är någon av eras tur igen."},
 		{shown:false, question:"Lägg ut ett video på din snapshat-story där du sjunger Fyra Bugg & en Coca-Cola"}
-	]
+	]} /* end swedish */
 };
+questions = question_holder_lang.english;
 
 console.log(questions);
 
@@ -100,6 +166,7 @@ function spinTheBottle(){
 
 function bottleStopped(){
 	document.getElementById("choise_box").style.display = "inline";
+	bottle_is_spinning = false;
 }
 
 
@@ -108,8 +175,12 @@ document.getElementById("button").addEventListener("click", function(){
 	document.getElementById("bottle_wrapper").style.display = "inline";
 });
 document.getElementById("bottle").addEventListener("mousedown", function(){
-	document.getElementById("choise_box").style.display = "none";
-	spinTheBottle();
+	if(!bottle_is_spinning){
+		document.getElementById("choise_box").style.display = "none";
+		bottle_is_spinning = true;
+		spinTheBottle();
+	}
+	
 });
 document.getElementById("truth_btn").addEventListener("mousedown", function(){
 	truthOrDareClicked(questions.truth);
@@ -146,6 +217,40 @@ function checkCompleted(u){
 }
 
 
+
+/****************LANG******************/
+
+document.getElementById("flag_sweden").addEventListener("mouseup", function(){
+	setLang("swe", true);
+});document.getElementById("flag_usa").addEventListener("mouseup", function(){
+	setLang("usa", true);
+});
+
+function setLang(lang, user_action){
+	
+	switch(lang){
+		case "swe":
+			questions = question_holder_lang.swedish;
+			document.getElementById("truth_btn").innerHTML = "Sanning";
+			document.getElementById("dare_btn").innerHTML = "Konka";
+			document.getElementById("button").innerHTML = "Gå vidare";
+			break;
+		default:
+			questions = question_holder_lang.english;
+			document.getElementById("truth_btn").innerHTML = "Truth";
+			document.getElementById("dare_btn").innerHTML = "Dare";
+			document.getElementById("button").innerHTML = "Continue";
+
+	}
+
+	if(user_action){
+		//hide lang options
+		document.getElementById("lang_wrapper").style.display = "none";
+		document.getElementById("bottle_wrapper").style.display = "inline";
+	}
+}
+
+
 /**************COLORS*****************/
 
 setInterval(changeColor, 15000);
@@ -167,3 +272,5 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+/************************CACHE***********************/
