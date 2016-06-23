@@ -33,7 +33,13 @@ var question_holder_lang = {english:{
 	{shown:false, question:"Have you ever had a finger inside your own asshole?"},
 	{shown:false, question:"have you had sex in the last 30 days?"},
 	{shown:false, question:"Who in this room have you slept with"},
-	{shown:false, question:"Of the people playing, who's mom would you rather sleep with of you had to choose?"}
+	{shown:false, question:"Of the people playing, who's mom would you rather sleep with of you had to choose?"},
+	{shown:false, question:"What drugs have you tried?"},
+	{shown:false, question:"Have you ever tried cocaine?"},
+	{shown:false, question:"Have you ever fallen asleep during class?"},
+	{shown:false, question:"When was the last time you showered besides today?"},
+	{shown:false, question:"How much do you spend on candy every month?"},
+	{shown:false, question:"How much did you spend on alcohol tonight?"}
 ],
 
 dare:[
@@ -61,6 +67,9 @@ dare:[
   	{shown:false, question:"Keep your hands inside someone else's pockets for 1 minute. "},
   	{shown:false, question:"You and you neighbours drink."},
   	{shown:false, question:"Kiss any part of the body of the person sitting to your right."},
+  	{shown:false, question:"Do your best Hillary Clinton impression."},
+  	{shown:false, question:"Pick 2 people and make them take a shot."},
+  	{shown:false, question:"Text your mom with a emojie of your choise."}
 ]
 		},
 
@@ -85,13 +94,16 @@ dare:[
 		{shown:false, question:"När förlorade du oskulden?"},
 		{shown:false, question:"Hur många kondomer har du på dig idag?"},
 		{shown:false, question:"Hoppas du få napp ikväll med någon i detta rummet? Vem?"},
-		{shown:false, question:"Har du någonsin kännt dig attraherad av någoon av samma kön eller motsatt kön om du är gay?"},
+		{shown:false, question:"Har du någonsin kännt dig attraherad av någon av samma kön eller motsatt kön om du är gay?"},
 		{shown:false, question:"Har du någonsin haft analsex?"},
 		{shown:false, question:"När hade du senast sex?"},
 		{shown:false, question:"Har du legat med fler än 15 personer?"},
 		{shown:false, question:"Har du någonsin haft ett finger i ditt anus?"},
 		{shown:false, question:"Vem skulle du helst ligga med, kungen eller statsministern?"},
-		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"}
+		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"},
+		{shown:false, question:"Vilket är ditt mest pinsamma fylleögonblick?"},
+		{shown:false, questions:"Vilka droger har du testat?"},
+		{shown:false, question:"När dushade du senast om du inte räknar med idag?"}
 
 	],
 	dare: [
@@ -119,7 +131,8 @@ dare:[
 		{shown:false, question:"Sjung den högsta ton du kan i 10 sekunder."},
 		{shown:false, question:"Drick 2 shots."},
 		{shown:false, question:"Dina 2 bordsgrannar sätter sig i på dina knän tills det är någon av eras tur igen."},
-		{shown:false, question:"Lägg ut ett video på din snapshat-story där du sjunger Fyra Bugg & en Coca-Cola"}
+		{shown:false, question:"Lägg ut ett video på din snapshat-story där du sjunger Fyra Bugg & en Coca-Cola."},
+		{shown:false, question:"Låtsas att du är Carola."}
 	]} /* end swedish */
 };
 questions = question_holder_lang.english;
