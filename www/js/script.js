@@ -39,7 +39,8 @@ var question_holder_lang = {english:{
 	{shown:false, question:"Have you ever fallen asleep during class?"},
 	{shown:false, question:"When was the last time you showered besides today?"},
 	{shown:false, question:"How much do you spend on candy every month?"},
-	{shown:false, question:"How much did you spend on alcohol tonight?"}
+	{shown:false, question:"How much did you spend on alcohol tonight?"},
+	{shown:false, question:"Does your family know you're here?"},
 ],
 
 dare:[
@@ -103,7 +104,8 @@ dare:[
 		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"},
 		{shown:false, question:"Vilket är ditt mest pinsamma fylleögonblick?"},
 		{shown:false, question:"Vilka droger har du testat?"},
-		{shown:false, question:"När dushade du senast om du inte räknar med idag?"}
+		{shown:false, question:"När dushade du senast om du inte räknar med idag?"},
+		{shown:false, question:"Vad fick du för betyg i den senaste engelskakursen du läste?"}
 
 	],
 	dare: [
