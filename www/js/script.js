@@ -102,7 +102,7 @@ dare:[
 		{shown:false, question:"Vem skulle du helst ligga med, kungen eller statsministern?"},
 		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"},
 		{shown:false, question:"Vilket är ditt mest pinsamma fylleögonblick?"},
-		{shown:false, questions:"Vilka droger har du testat?"},
+		{shown:false, question:"Vilka droger har du testat?"},
 		{shown:false, question:"När dushade du senast om du inte räknar med idag?"}
 
 	],
@@ -137,7 +137,7 @@ dare:[
 };
 questions = question_holder_lang.english;
 
-console.log(questions);
+console.log(question_holder_lang);
 
 function nextQuestion(choise){
 	var next_question; // index of the next question, will be checked so that it hasn't already been shown

@@ -102,7 +102,7 @@ dare:[
 		{shown:false, question:"Vem skulle du helst ligga med, kungen eller statsministern?"},
 		{shown:false, question:"Vilken politiker tänder du mest på, Gudrun Schyman eller Mona Sahlin?"},
 		{shown:false, question:"Vilket är ditt mest pinsamma fylleögonblick?"},
-		{shown:false, questions:"Vilka droger har du testat?"},
+		{shown:false, question:"Vilka droger har du testat?"},
 		{shown:false, question:"När dushade du senast om du inte räknar med idag?"}
 
 	],
